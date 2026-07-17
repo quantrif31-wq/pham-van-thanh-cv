@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Phạm Văn Thành - CV</title>
+  <style>
+    :root {
+      --paper: #f6f2ea;
+      --ink: #1f2a37;
+      --muted: #586272;
+      --accent: #0f5c4b;
+      --accent-soft: #d6e8e2;
+      --line: #d8d1c6;
+      --panel: #fffdf9;
+      --tag: #eef5f2;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Arial, sans-serif;
+      color: var(--ink);
+      background: #d9d4cc;
+    }
+
+    .page {
+      width: 210mm;
+      min-height: 297mm;
+      margin: 0 auto;
+      padding: 12mm;
+      background: var(--paper);
+      page-break-after: always;
+    }
+
+    .sheet {
+      display: grid;
+      grid-template-columns: 70mm 1fr;
+      min-height: 273mm;
+      background: var(--panel);
+      border: 1px solid rgba(31, 42, 55, 0.08);
+      box-shadow: 0 16px 36px rgba(31, 42, 55, 0.08);
+      overflow: hidden;
+    }
+
+    .left {
+      padding: 11mm 8.5mm 10mm;
+      background: linear-gradient(180deg, #f1eee7 0%, #f8f6f0 100%);
+      border-right: 1px solid var(--line);
+    }
+
+    .right {
+      padding: 10.5mm 10.5mm 10mm;
+    }
+
+    .hero {
+      display: flex;
+      gap: 14px;
+      align-items: center;
+      margin-bottom: 14px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--accent-soft);
+    }
+
+    .avatar {
+      width: 82px;
+      height: 82px;
+      border-radius: 50%;
+      flex: 0 0 auto;
+      object-fit: cover;
+      border: 3px solid rgba(15, 92, 75, 0.12);
+      box-shadow: 0 10px 24px rgba(31, 42, 55, 0.12);
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 27px;
+      line-height: 1.05;
+      letter-spacing: 0.4px;
+    }
+
+    .subtitle {
+      margin-top: 5px;
+      color: var(--accent);
+      font-size: 12.8px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .summary {
+      margin: 9px 0 0;
+      color: var(--muted);
+      font-size: 12.9px;
+      line-height: 1.52;
+    }
+
+    .section {
+      margin-top: 14px;
+    }
+
+    .left .section:first-child,
+    .right .section:first-child {
+      margin-top: 0;
+    }
+
+    .section-title {
+      margin: 0 0 8px;
+      font-size: 12px;
+      font-weight: 800;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+    }
+
+    .contact-item,
+    .edu-item,
+    .award-item,
+    .ref-item {
+      margin-bottom: 8px;
+      font-size: 12.3px;
+      line-height: 1.45;
+      color: var(--ink);
+    }
+
+    .contact-item span,
+    .edu-item span,
+    .award-item span,
+    .ref-item span {
+      display: block;
+      color: var(--muted);
+    }
+
+    .ref-item {
+      break-inside: avoid;
+      page-break-inside: avoid;
+    }
+
+    .skill-group {
+      margin-bottom: 10px;
+    }
+
+    .skill-label {
+      font-size: 11.9px;
+      font-weight: 700;
+      color: var(--ink);
+      margin-bottom: 4px;
+    }
+
+    .skill-text,
+    .goal-text,
+    .mini-note {
+      color: var(--muted);
+      font-size: 12.1px;
+      line-height: 1.48;
+    }
+
+    .goal-block + .goal-block {
+      margin-top: 9px;
+    }
+
+    .goal-title {
+      margin: 0 0 4px;
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--ink);
+    }
+
+    .tag-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 2px;
+    }
+
+    .tag {
+      padding: 4px 8px;
+      border-radius: 999px;
+      background: var(--tag);
+      color: var(--accent);
+      font-size: 11.2px;
+      font-weight: 700;
+    }
+
+    .qr-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+    }
+
+    .qr-card {
+      padding: 8px 7px;
+      border-radius: 12px;
+      border: 1px solid var(--line);
+      background: #fff;
+      text-align: center;
+    }
+
+    .qr-card img {
+      width: 54px;
+      height: 54px;
+      display: block;
+      margin: 0 auto 6px;
+    }
+
+    .qr-card strong {
+      display: block;
+      font-size: 10.8px;
+      line-height: 1.35;
+      color: var(--ink);
+    }
+
+    .qr-card span {
+      display: block;
+      margin-top: 2px;
+      font-size: 10.3px;
+      line-height: 1.35;
+      color: var(--muted);
+    }
+
+    .project {
+      padding: 9px 10px;
+      margin-bottom: 9px;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: #fff;
+      break-inside: avoid;
+      page-break-inside: avoid;
+    }
+
+    .project-body {
+      display: grid;
+      grid-template-columns: 1fr 76px;
+      gap: 10px;
+      align-items: start;
+    }
+
+    .project:last-child {
+      margin-bottom: 0;
+    }
+
+    .project-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      align-items: baseline;
+      margin-bottom: 4px;
+    }
+
+    .project-title {
+      margin: 0;
+      font-size: 16px;
+      font-weight: 800;
+      color: var(--ink);
+    }
+
+    .project-time {
+      flex: 0 0 auto;
+      font-size: 11.3px;
+      color: var(--muted);
+      font-weight: 700;
+      text-align: right;
+    }
+
+    .project-meta {
+      margin: 0 0 6px;
+      font-size: 11.7px;
+      color: var(--accent);
+      font-weight: 700;
+      line-height: 1.42;
+    }
+
+    .project-role {
+      margin: 0 0 5px;
+      font-size: 12px;
+      color: var(--ink);
+      line-height: 1.45;
+    }
+
+    .project-role strong {
+      color: var(--accent);
+    }
+
+    .project-desc {
+      margin: 0 0 5px;
+      font-size: 12.2px;
+      color: var(--muted);
+      line-height: 1.48;
+    }
+
+    .project ul {
+      margin: 0;
+      padding-left: 17px;
+      color: var(--ink);
+      font-size: 11.9px;
+      line-height: 1.45;
+    }
+
+    .project li + li {
+      margin-top: 4px;
+    }
+
+    .project-note {
+      margin-top: 6px;
+      font-size: 10.8px;
+      line-height: 1.4;
+      color: var(--muted);
+    }
+
+    .inline-qr {
+      text-align: center;
+    }
+
+    .inline-qr img {
+      width: 68px;
+      height: 68px;
+      display: block;
+      margin: 0 auto 5px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fff;
+    }
+
+    .inline-qr span {
+      display: block;
+      font-size: 10.2px;
+      line-height: 1.35;
+      color: var(--muted);
+    }
+
+    .proof-link {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 700;
+      word-break: break-word;
+    }
+
+    .proof-link:hover {
+      text-decoration: underline;
+    }
+
+    .compact-project {
+      padding: 9px 10px;
+      margin-bottom: 9px;
+      border-radius: 12px;
+      border: 1px solid var(--line);
+      background: #fff;
+      break-inside: avoid;
+      page-break-inside: avoid;
+    }
+
+    .compact-project h4 {
+      margin: 0 0 4px;
+      font-size: 13.7px;
+      color: var(--ink);
+    }
+
+    .compact-body {
+      display: grid;
+      grid-template-columns: 1fr 74px;
+      gap: 10px;
+      align-items: start;
+    }
+
+    .compact-meta {
+      margin: 0 0 4px;
+      font-size: 11.4px;
+      color: var(--accent);
+      font-weight: 700;
+      line-height: 1.4;
+    }
+
+    .compact-role {
+      margin: 0 0 4px;
+      font-size: 11.8px;
+      color: var(--ink);
+      line-height: 1.45;
+    }
+
+    .compact-role strong {
+      color: var(--accent);
+    }
+
+    .compact-project p {
+      margin: 0 0 4px;
+      font-size: 12px;
+      color: var(--muted);
+      line-height: 1.48;
+    }
+
+    .compact-project ul {
+      margin: 0;
+      padding-left: 16px;
+      font-size: 11.7px;
+      line-height: 1.42;
+      color: var(--ink);
+    }
+
+    .compact-project li + li {
+      margin-top: 3px;
+    }
+
+    @media print {
+      body {
+        background: #fff;
+      }
+
+      .page {
+        margin: 0;
+        padding: 0;
+      }
+
+      .sheet {
+        border: none;
+        box-shadow: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <section class="page">
+    <div class="sheet">
+      <aside class="left">
+        <div class="section">
+          <h2 class="section-title">Liên hệ</h2>
+          <div class="contact-item">
+            <strong>Phạm Văn Thành</strong>
+            <span>Long Bình, Đồng Nai</span>
+          </div>
+          <div class="contact-item">
+            <strong>Điện thoại</strong>
+            <span>0867692556</span>
+          </div>
+          <div class="contact-item">
+            <strong>Email</strong>
+            <span>phamvanthanh2734@gmail.com</span>
+          </div>
+          <div class="contact-item">
+            <strong>GitHub</strong>
+            <span>github.com/quantrif31-wq</span>
+          </div>
+        </div>
+
+        <div class="section">
+          <h2 class="section-title">Kỹ năng cốt lõi</h2>
+          <div class="skill-group">
+            <div class="skill-label">Backend</div>
+            <div class="skill-text">ASP.NET Core, C#, REST API, Entity Framework Core, SQL Server, authentication/authorization, integration logic và reconciliation flow.</div>
+          </div>
+          <div class="skill-group">
+            <div class="skill-label">Dữ liệu và vận hành</div>
+            <div class="skill-text">Thiết kế cơ sở dữ liệu, xử lý dữ liệu kho, audit-sensitive flow, background worker reliability, import/export processing.</div>
+          </div>
+          <div class="skill-group">
+            <div class="skill-label">Công cụ</div>
+            <div class="skill-text">Git/GitHub, Swagger, Postman, Docker, Vue/Vite để phối hợp frontend khi cần.</div>
+          </div>
+        </div>
+
+        <div class="section">
+          <h2 class="section-title">Học vấn</h2>
+          <div class="edu-item">
+            <strong>FPT Polytechnic</strong>
+            <span>Công nghệ thông tin</span>
+            <span>GPA hiện tại: 3.63</span>
+            <span>Định hướng: Backend Developer Intern</span>
+          </div>
+        </div>
+
+        <div class="section">
+          <h2 class="section-title">Mục tiêu nghề nghiệp</h2>
+          <div class="goal-block">
+            <div class="goal-title">Ngắn hạn</div>
+            <div class="goal-text">Tham gia môi trường có quy trình kỹ thuật tốt để phát triển vững năng lực backend, đặc biệt ở các bài toán API, SQL Server, WMS/ERP và độ ổn định hệ thống.</div>
+          </div>
+          <div class="goal-block">
+            <div class="goal-title">Dài hạn</div>
+            <div class="goal-text">Phấn đấu trở thành nhân viên chính thức, có thể đảm nhận độc lập các hạng mục backend quan trọng và đóng góp ngày càng rõ ràng hơn vào chất lượng sản phẩm.</div>
+          </div>
+        </div>
+
+      </aside>
+
+      <main class="right">
+        <div class="hero">
+          <img class="avatar" src="avatar.png" alt="Ảnh chân dung Phạm Văn Thành" />
+          <div>
+            <h1>PHẠM VĂN THÀNH</h1>
+            <div class="subtitle">Backend Developer Intern</div>
+            <p class="summary">
+              Sinh viên định hướng backend, tập trung vào xây dựng API, xử lý dữ liệu SQL Server và các bài toán liên quan WMS/ERP,
+              kho vận và hệ thống kiểm soát truy cập. Ưu tiên cách làm việc rõ ràng, trung thực về phạm vi đóng góp và hướng tới giá trị có thể kiểm chứng.
+            </p>
+          </div>
+        </div>
+
+        <section class="section">
+          <h2 class="section-title">Dự án trọng tâm</h2>
+
+          <article class="project">
+            <div class="project-head">
+              <h3 class="project-title">wms-epe-fast-erp</h3>
+              <div class="project-time">05/2026 - 06/2026</div>
+            </div>
+            <div class="project-body">
+              <div>
+                <p class="project-desc">
+                  Phần mềm phục vụ kho vận doanh nghiệp, tập trung vào luồng đồng bộ nghiệp vụ giữa WMS và ERP với yêu cầu cao về tính đúng dữ liệu và khả năng đối soát.
+                </p>
+                <p class="project-meta">Dự án thực tập phục vụ kho vận cho doanh nghiệp FAST · Repo riêng tư do bảo mật</p>
+                <p class="project-role"><strong>Vai trò:</strong> Backend Intern.</p>
+                <ul>
+                  <li>Thực hiện các đầu việc backend cho tích hợp ERP/WMS như provider-neutral adapter, inbox/outbox flow, acknowledgment và reconciliation contract.</li>
+                  <li>Đóng góp vào các bài toán đối soát tồn kho và tài chính: stock card, opening balance, ledger/on-hand và read model phục vụ kiểm tra chênh lệch.</li>
+                  <li>Xử lý các issue tăng độ tin cậy backend liên quan background worker, tránh fake success, attachment safety và các luồng nhạy cảm về audit.</li>
+                  <li>Tham gia các hạng mục truy vết lot/serial/HU, genealogy và recall/traceability report cho vận hành kho doanh nghiệp.</li>
+                </ul>
+              </div>
+              <div class="inline-qr">
+                <img src="https://quickchart.io/qr?size=120&text=Repo%20ri%C3%AAng%20t%C6%B0%20do%20b%E1%BA%A3o%20m%E1%BA%ADt%20-%20kh%C3%B4ng%20c%C3%B4ng%20khai%20m%C3%A3%20ngu%E1%BB%93n" alt="QR repo riêng tư" />
+                <span>Repo riêng tư</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="project">
+            <div class="project-head">
+              <h3 class="project-title">WH-Managerment</h3>
+              <div class="project-time">Từ 01/06/2026</div>
+            </div>
+            <div class="project-body">
+              <div>
+                <p class="project-desc">
+                  Phần mềm quản lý kho vận tích hợp AI được xây dựng cho cuộc thi SmartGen AI 2026, theo hướng sản phẩm có thể trình bày và demo ở cấp độ thi đấu.
+                </p>
+                <p class="project-meta">Dự án kho vận tích hợp AI cho SmartGen AI 2026 · Đã vào chung kết, vòng chung kết đang diễn ra</p>
+                <p class="project-role"><strong>Vai trò:</strong> Thành viên phát triển sản phẩm · Backend / hỗ trợ hoàn thiện hệ thống.</p>
+                <ul>
+                  <li>Tham gia cùng đội trong giai đoạn hoàn thiện sản phẩm gần sát vòng chung kết để đưa hệ thống về trạng thái sẵn sàng trình bày và demo.</li>
+                  <li>Làm việc bám theo cấu trúc dự án gồm backend, frontend và tài liệu hóa để hỗ trợ tiến độ tổng thể của sản phẩm.</li>
+                  <li>Tính đến ngày 19/06/2026, dự án đã vào chung kết và vòng thi chung kết diễn ra vào 20/06/2026; chưa có kết quả cuối cùng nên không ghi nhận vượt phạm vi thực tế.</li>
+                </ul>
+                <div class="project-note">Phần mô tả được giữ ở mức đã kiểm chứng từ repo công khai và trạng thái cuộc thi.</div>
+              </div>
+              <div class="inline-qr">
+                <img src="https://quickchart.io/qr?size=120&text=https%3A%2F%2Fgithub.com%2FWH-Managerment%2FWH-Managerment" alt="QR repo WH-Managerment" />
+                <span>Repo GitHub</span>
+                <img src="https://quickchart.io/qr?size=120&text=https%3A%2F%2Fweb.facebook.com%2FCNTTFPLHCM%2Fposts%2Fpfbid0XSWke2Kw7CMoKDJWroXXuCBuQiv96XN5tYUCqu8zmAPm96Av7uTwynXhg9xxScmKl" alt="QR chứng cứ SmartGen AI" />
+                <span>Minh chứng cuộc thi</span>
+              </div>
+            </div>
+          </article>
+
+        </section>
+      </main>
+    </div>
+  </section>
+
+  <section class="page">
+    <div class="sheet">
+      <aside class="left">
+        <div class="section">
+          <h2 class="section-title">Thế mạnh làm việc</h2>
+          <div class="tag-list">
+            <span class="tag">Backend mindset</span>
+            <span class="tag">WMS/ERP interest</span>
+            <span class="tag">API-first</span>
+            <span class="tag">Data integrity</span>
+            <span class="tag">Problem solving</span>
+          </div>
+        </div>
+
+        <div class="section">
+          <h2 class="section-title">Công cụ hỗ trợ</h2>
+          <div class="tag-list">
+            <span class="tag">SQL Server</span>
+            <span class="tag">EF Core</span>
+            <span class="tag">Swagger</span>
+            <span class="tag">Postman</span>
+            <span class="tag">GitHub</span>
+            <span class="tag">Docker</span>
+            <span class="tag">Vue/Vite</span>
+          </div>
+        </div>
+
+        <div class="section">
+          <h2 class="section-title">Thông tin thêm</h2>
+          <div class="ref-item">
+            <strong>Định hướng</strong>
+            <span>Theo đuổi lộ trình backend .NET, ưu tiên môi trường có yêu cầu rõ về chất lượng, vận hành và tính ổn định.</span>
+          </div>
+          <div class="ref-item">
+            <strong>Cách làm việc</strong>
+            <span>Tập trung vào phần việc có thể kiểm chứng, tiếp cận bài toán từ dữ liệu và quy trình thay vì mô tả chung chung.</span>
+          </div>
+        </div>
+
+        <div class="section">
+          <h2 class="section-title">Hoạt động</h2>
+          <div class="ref-item">
+            <strong>Poly Run</strong>
+            <span>Tham gia giải chạy của trường, rèn luyện tính kỷ luật và sức bền.</span>
+          </div>
+          <div class="ref-item">
+            <strong>Hoạt động thiện nguyện cùng trường</strong>
+            <span>Tham gia các chương trình đóng góp cộng đồng và hỗ trợ hoạt động tập thể.</span>
+          </div>
+        </div>
+      </aside>
+
+      <main class="right">
+        <section class="section">
+          <h2 class="section-title">Tiếp tục dự án trọng tâm</h2>
+
+          <article class="project">
+            <div class="project-head">
+              <h3 class="project-title">V-Shield-2.0</h3>
+              <div class="project-time">05/2026 - 06/2026</div>
+            </div>
+            <div class="project-body">
+              <div>
+                <p class="project-desc">
+                  Phần mềm kiểm soát truy cập được nâng cấp lên phiên bản 2.0 theo hướng doanh nghiệp hơn, chú trọng bảo mật, phân tích dữ liệu và khả năng sẵn sàng triển khai.
+                </p>
+                <p class="project-meta">Phiên bản nâng cấp rõ rệt từ V-Shield · Security system, AI-oriented features và deployment readiness</p>
+                <p class="project-role"><strong>Vai trò:</strong> Người phát triển chính · Backend / AI / deployment readiness.</p>
+                <ul>
+                  <li>Trực tiếp phát triển các hạng mục security hardening, enterprise readiness và ổn định hóa các luồng startup/MFA.</li>
+                  <li>Xây dựng các tính năng AI và analytics như attendance anomaly detection, UEBA access log, dashboard intelligence và fuzzy matching cho biển số.</li>
+                  <li>Thực hiện import pipeline, import/export metadata module, đồng thời chuẩn bị Docker runtime và tài liệu deployment/public-domain readiness.</li>
+                </ul>
+              </div>
+              <div class="inline-qr">
+                <img src="https://quickchart.io/qr?size=120&text=https%3A%2F%2Fgithub.com%2Fquantrif31-wq%2FV-Shield-2.0" alt="QR repo V-Shield-2.0" />
+                <span>Repo GitHub</span>
+              </div>
+            </div>
+          </article>
+        </section>
+
+        <section class="section">
+          <h2 class="section-title">Giải thưởng</h2>
+          <div class="project">
+            <div class="project-body">
+              <div>
+                <div class="award-item">
+                  <strong>Web AI Hackathon 2026 - Á quân</strong>
+                  <span>Thành tích gắn với dự án V-Shield-2.0.</span>
+                  <span>Đính kèm mã QR để nhà tuyển dụng có thể xác minh nhanh nguồn tin công khai.</span>
+                </div>
+              </div>
+              <div class="inline-qr">
+                <img src="https://quickchart.io/qr?size=120&text=https%3A%2F%2Fbaodongnai.com.vn%2Fxa-hoi%2Fkhoa-hoc-cong-nghe%2F202604%2Fdoi-thi-powertech-doat-giai-nhat-cuoc-thi-web-ai-hackathon-nam-2026-f25255e%2F" alt="QR báo Đồng Nai" />
+                <span>Báo Đồng Nai</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section">
+          <h2 class="section-title">Dự án tham khảo thêm</h2>
+
+          <article class="compact-project">
+            <div class="compact-body">
+              <div>
+                <h4>Hệ thống quản lý rạp phim</h4>
+                <p>Phần mềm quản lý rạp phim xây dựng theo hướng tách lớp nghiệp vụ và dữ liệu, phục vụ các thao tác quản lý cơ bản trong hệ thống phòng vé.</p>
+                <p class="compact-meta">ARKPVT/QL_PV · C# / BLL / DAL / DTO</p>
+                <p class="compact-role"><strong>Vai trò:</strong> Backend logic / desktop application developer.</p>
+                <ul>
+                  <li>Tham gia xây dựng cấu trúc phân lớp gồm BLL, DAL, DTO và project chính để tổ chức xử lý nghiệp vụ rõ ràng hơn.</li>
+                  <li>Làm việc với logic quản lý dữ liệu và luồng xử lý nền tảng cho bài toán quản lý rạp phim trong ứng dụng C#.</li>
+                </ul>
+              </div>
+              <div class="inline-qr">
+                <img src="https://quickchart.io/qr?size=120&text=https%3A%2F%2Fgithub.com%2FARKPVT%2FQL_PV" alt="QR repo QL_PV" />
+                <span>Repo GitHub</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="compact-project">
+            <div class="compact-body">
+              <div>
+                <h4>Website bán bánh online</h4>
+                <p>Website bán bánh và vận hành đơn hàng nội bộ, phát triển trên ASP.NET Core với nhiều module quản lý sản phẩm, kho, đơn hàng và nhân sự.</p>
+                <p class="compact-meta">ARKPVT/Ban_Banh · ASP.NET Core / C# / SQL</p>
+                <p class="compact-role"><strong>Vai trò:</strong> Backend developer.</p>
+                <ul>
+                  <li>Xây dựng backend cho các nhóm chức năng như sản phẩm, đơn hàng, tồn kho, nhà cung cấp, nhân viên và dashboard vận hành.</li>
+                  <li>Làm việc với controller, model, dữ liệu SQL và luồng xử lý quản trị để hỗ trợ vận hành website bán bánh.</li>
+                </ul>
+              </div>
+              <div class="inline-qr">
+                <img src="https://quickchart.io/qr?size=120&text=https%3A%2F%2Fgithub.com%2FARKPVT%2FBan_Banh" alt="QR repo Ban_Banh" />
+                <span>Repo GitHub</span>
+              </div>
+            </div>
+          </article>
+        </section>
+
+      </main>
+    </div>
+  </section>
+</body>
+</html>
