@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Phạm Văn Thành - CV</title>
+  <title>Phạm Văn Thành - Full Stack Developer CV</title>
   <style>
     :root {
       --paper: #f6f2ea;
@@ -47,21 +47,21 @@
     }
 
     .left {
-      padding: 11mm 8.5mm 10mm;
+      padding: 10mm 8.5mm 9mm;
       background: linear-gradient(180deg, #f1eee7 0%, #f8f6f0 100%);
       border-right: 1px solid var(--line);
     }
 
     .right {
-      padding: 10.5mm 10.5mm 10mm;
+      padding: 9.5mm 10mm 9mm;
     }
 
     .hero {
       display: flex;
       gap: 14px;
       align-items: center;
-      margin-bottom: 14px;
-      padding-bottom: 12px;
+      margin-bottom: 11px;
+      padding-bottom: 10px;
       border-bottom: 2px solid var(--accent-soft);
     }
 
@@ -99,7 +99,7 @@
     }
 
     .section {
-      margin-top: 14px;
+      margin-top: 12px;
     }
 
     .left .section:first-child,
@@ -222,8 +222,8 @@
     }
 
     .project {
-      padding: 9px 10px;
-      margin-bottom: 9px;
+      padding: 8px 10px;
+      margin-bottom: 8px;
       border: 1px solid var(--line);
       border-radius: 14px;
       background: #fff;
@@ -289,6 +289,35 @@
       font-size: 12.2px;
       color: var(--muted);
       line-height: 1.48;
+    }
+
+    .project-narrative {
+      margin: 0 0 5px;
+      font-size: 11.8px;
+      line-height: 1.45;
+      color: var(--muted);
+    }
+
+    .project-narrative strong {
+      color: var(--ink);
+    }
+
+    .project-points {
+      margin: 0 0 6px;
+      padding-left: 17px;
+      color: var(--muted);
+      font-size: 11.7px;
+      line-height: 1.44;
+    }
+
+    .project-points li + li {
+      margin-top: 3px;
+    }
+
+    .project-points em {
+      font-style: normal;
+      font-weight: 700;
+      color: var(--ink);
     }
 
     .project ul {
@@ -421,6 +450,7 @@
   </style>
 </head>
 <body>
+  <!-- ==================== TRANG 1 ==================== -->
   <section class="page">
     <div class="sheet">
       <aside class="left">
@@ -428,7 +458,7 @@
           <h2 class="section-title">Liên hệ</h2>
           <div class="contact-item">
             <strong>Phạm Văn Thành</strong>
-            <span>Long Bình, Đồng Nai</span>
+            <span>Tân Bình, TP. Hồ Chí Minh</span>
           </div>
           <div class="contact-item">
             <strong>Điện thoại</strong>
@@ -445,28 +475,13 @@
         </div>
 
         <div class="section">
-          <h2 class="section-title">Kỹ năng cốt lõi</h2>
-          <div class="skill-group">
-            <div class="skill-label">Backend</div>
-            <div class="skill-text">ASP.NET Core, C#, REST API, Entity Framework Core, SQL Server, authentication/authorization, integration logic và reconciliation flow.</div>
-          </div>
-          <div class="skill-group">
-            <div class="skill-label">Dữ liệu và vận hành</div>
-            <div class="skill-text">Thiết kế cơ sở dữ liệu, xử lý dữ liệu kho, audit-sensitive flow, background worker reliability, import/export processing.</div>
-          </div>
-          <div class="skill-group">
-            <div class="skill-label">Công cụ</div>
-            <div class="skill-text">Git/GitHub, Swagger, Postman, Docker, Vue/Vite để phối hợp frontend khi cần.</div>
-          </div>
-        </div>
-
-        <div class="section">
           <h2 class="section-title">Học vấn</h2>
           <div class="edu-item">
             <strong>FPT Polytechnic</strong>
             <span>Công nghệ thông tin</span>
-            <span>GPA hiện tại: 3.63</span>
-            <span>Định hướng: Backend Developer Intern</span>
+            <span>07/2024 - 09/2026 (dự kiến)</span>
+            <span>GPA hiện tại: 3.61</span>
+            <span>Định hướng: Full Stack Developer</span>
           </div>
         </div>
 
@@ -474,14 +489,29 @@
           <h2 class="section-title">Mục tiêu nghề nghiệp</h2>
           <div class="goal-block">
             <div class="goal-title">Ngắn hạn</div>
-            <div class="goal-text">Tham gia môi trường có quy trình kỹ thuật tốt để phát triển vững năng lực backend, đặc biệt ở các bài toán API, SQL Server, WMS/ERP và độ ổn định hệ thống.</div>
+            <div class="goal-text">Vận dụng năng lực Full Stack toàn diện (ASP.NET Core backend, Vue/Flutter frontend và AI thị giác máy tính) vào phát triển các giải pháp phần mềm hoàn chỉnh, tối ưu trải nghiệm người dùng và hiệu năng hệ thống.</div>
           </div>
           <div class="goal-block">
             <div class="goal-title">Dài hạn</div>
-            <div class="goal-text">Phấn đấu trở thành nhân viên chính thức, có thể đảm nhận độc lập các hạng mục backend quan trọng và đóng góp ngày càng rõ ràng hơn vào chất lượng sản phẩm.</div>
+            <div class="goal-text">Phát triển thành Senior Full Stack Engineer / Technical Lead, dẫn dắt thiết kế và xây dựng các sản phẩm công nghệ quy mô lớn, từ giao diện người dùng đến kiến trúc backend phân tán.</div>
           </div>
         </div>
 
+        <div class="section">
+          <h2 class="section-title">Kỹ năng cốt lõi</h2>
+          <div class="skill-group">
+            <div class="skill-label">Backend .NET</div>
+            <div class="skill-text">ASP.NET Core, C#, REST API, Entity Framework Core, SQL Server, SignalR, Identity/JWT, Outbox pattern, Background Worker.</div>
+          </div>
+          <div class="skill-group">
+            <div class="skill-label">Frontend &amp; Mobile</div>
+            <div class="skill-text">Vue 3, Vite, JavaScript, HTML5/CSS3, Tailwind, Flutter / Android app, Three.js 3D WebGL, Responsive UI.</div>
+          </div>
+          <div class="skill-group">
+            <div class="skill-label">AI, Video &amp; DevOps</div>
+            <div class="skill-text">WebRTC, RTSP, TURN (coturn), HLS DVR, ONNX Runtime CUDA, YuNet, SFace, YOLOv8, Docker container stack.</div>
+          </div>
+        </div>
       </aside>
 
       <main class="right">
@@ -489,16 +519,226 @@
           <img class="avatar" src="avatar.png" alt="Ảnh chân dung Phạm Văn Thành" />
           <div>
             <h1>PHẠM VĂN THÀNH</h1>
-            <div class="subtitle">Backend Developer Intern</div>
+            <div class="subtitle">Full Stack Developer</div>
             <p class="summary">
-              Sinh viên định hướng backend, tập trung vào xây dựng API, xử lý dữ liệu SQL Server và các bài toán liên quan WMS/ERP,
-              kho vận và hệ thống kiểm soát truy cập. Ưu tiên cách làm việc rõ ràng, trung thực về phạm vi đóng góp và hướng tới giá trị có thể kiểm chứng.
+              Sinh viên định hướng Full Stack, có năng lực làm chủ toàn diện từ frontend hiện đại (Vue 3, Flutter mobile) đến kiến trúc backend phân tán C# .NET, SQL Server và pipeline Edge AI GPU / video streaming. Trưởng nhóm phát triển và kiến trúc sư hệ thống tại V-Shield-2.0 (Á quân Web AI Hackathon 2026), kết hợp kinh nghiệm thực tập WMS/ERP tại doanh nghiệp FAST.
             </p>
           </div>
         </div>
 
         <section class="section">
           <h2 class="section-title">Dự án trọng tâm</h2>
+
+          <article class="project">
+            <div class="project-head">
+              <h3 class="project-title">V-Shield-2.0 — Quản lý an ninh &amp; kiểm soát truy cập</h3>
+              <div class="project-time">05/2026 - 09/2026</div>
+            </div>
+            <div class="project-body">
+              <div>
+                <p class="project-meta">Kiến trúc phân tán (AreaNode - Central) · Edge AI GPU · Streaming WebRTC/HLS</p>
+                <p class="project-narrative">
+                  <strong>Bối cảnh &amp; Vấn đề:</strong> Phương pháp quản lý an ninh truyền thống tại doanh nghiệp còn nhiều bất cập: bãi xe ghi chép sổ sách/thẻ giấy dễ thất lạc và nhầm lẫn; việc kiểm soát các cửa giới hạn phụ thuộc quan sát mắt thường dễ bị giả mạo trà trộn; quy trình xác minh thủ công gây ùn tắc tại cổng giờ cao điểm và tạo áp lực lớn cho đội ngũ an ninh.
+                </p>
+                <p class="project-narrative">
+                  <strong>Giải pháp &amp; Giá trị thực tế:</strong> V-Shield ứng dụng AI thị giác máy tính và kiến trúc phân tán để tự động hóa toàn bộ quy trình kiểm soát người và phương tiện:
+                </p>
+                <ul class="project-points">
+                  <li><em>Tại khu vực gửi xe:</em> Nhận diện đồng thời biển số và khuôn mặt tài xế tốc độ cao, tự động lưu vết và truy vết. Hệ thống vận hành theo nguyên tắc bảo vệ chặt chẽ: người đưa xe vào chỉ người đó mới được đưa ra hoặc ủy quyền xác nhận trên ứng dụng; linh hoạt sử dụng nhiều xe mà không cần đăng ký cố định.</li>
+                  <li><em>Tại khu vực nội bộ &amp; sảnh:</em> Kết hợp nhận diện khuôn mặt với phân quyền chi tiết (RBAC/ABAC). Cá nhân chỉ được vào khu vực phù hợp vai trò, tự động hóa đóng/mở barrier/khóa từ và cảnh báo xâm nhập trái phép.</li>
+                </ul>
+                <p class="project-role">
+                  <strong>Vai trò:</strong> Trưởng nhóm phát triển (Team Lead) &amp; Kiến trúc sư Full Stack (~87% commit cốt lõi: chủ trì kiến trúc phân tán, pipeline Edge AI GPU, backend C# .NET và frontend Vue 3/3D; phân rã task và hướng dẫn nhóm hoàn thiện testing/tài liệu).
+                </p>
+                <ul>
+                  <li><strong>Kiến trúc phân tán, Streaming &amp; Web 3D:</strong> Thiết kế mô hình AreaNode &lt;-&gt; Central (Edge Docker/Cloud VPS, hybrid SignalR sync, offline resilience); pipeline WebRTC/RTSP/HLS DVR kết hợp Dashboard điều hành trung tâm (Vue 3, Three.js 3D WebGL số hóa khuôn viên/cổng, live alert feed).</li>
+                  <li><strong>Thị giác máy tính GPU &amp; Cổng thông hành:</strong> Triển khai FaceID GPU (YuNet + SFace CUDA, guided 5 góc), đọc biển số (YOLOv8 + PaddleOCR + Levenshtein fuzzy matching), Dynamic TOTP QR (cửa sổ trượt 120s, auto-rearm stream) và phát hiện sự cố an ninh (YOLOv8-pose + LSTM).</li>
+                </ul>
+              </div>
+              <div class="inline-qr">
+                <img src="https://quickchart.io/qr?size=120&text=https%3A%2F%2Fgithub.com%2Fquantrif31-wq%2FV-Shield-2.0" alt="QR repo V-Shield-2.0" />
+                <span>Repo GitHub</span>
+              </div>
+            </div>
+          </article>
+        </section>
+      </main>
+    </div>
+  </section>
+
+  <!-- ==================== TRANG 2 ==================== -->
+  <section class="page">
+    <div class="sheet">
+      <aside class="left">
+        <div class="section">
+          <h2 class="section-title">Thế mạnh làm việc</h2>
+          <div class="tag-list">
+            <span class="tag">Full Stack mindset</span>
+            <span class="tag">End-to-End delivery</span>
+            <span class="tag">System architecture</span>
+            <span class="tag">WebRTC / Streaming</span>
+            <span class="tag">Edge AI / CUDA</span>
+            <span class="tag">Distributed sync</span>
+            <span class="tag">API-first</span>
+            <span class="tag">Data integrity</span>
+            <span class="tag">Problem solving</span>
+          </div>
+        </div>
+
+        <div class="section">
+          <h2 class="section-title">Công cụ hỗ trợ</h2>
+          <div class="tag-list">
+            <span class="tag">C# / .NET</span>
+            <span class="tag">SQL Server</span>
+            <span class="tag">EF Core</span>
+            <span class="tag">SignalR</span>
+            <span class="tag">WebRTC</span>
+            <span class="tag">ONNX / CUDA</span>
+            <span class="tag">YOLOv8</span>
+            <span class="tag">Docker</span>
+            <span class="tag">Flutter</span>
+            <span class="tag">NBomber</span>
+            <span class="tag">Swagger</span>
+            <span class="tag">Postman</span>
+            <span class="tag">GitHub</span>
+            <span class="tag">Vue/Vite</span>
+          </div>
+        </div>
+
+        <div class="section">
+          <h2 class="section-title">Năng lực quản trị &amp; Nhóm</h2>
+          <div class="ref-item">
+            <strong>Điều phối kỹ thuật</strong>
+            <span>Phân rã module, hướng dẫn kỹ thuật cho frontend và tester, review mã nguồn và gỡ vướng các bài toán kiến trúc.</span>
+          </div>
+          <div class="ref-item">
+            <strong>Quản lý tiến độ</strong>
+            <span>Lập kế hoạch sprint, kiểm soát milestone và theo dõi tiến độ hoàn thiện sản phẩm theo lộ trình.</span>
+          </div>
+          <div class="ref-item">
+            <strong>Kiểm thử &amp; Độ tin cậy</strong>
+            <span>Thiết lập kịch bản test UAT, kiểm thử tải NBomber và bảo đảm tính chịu lỗi trên môi trường phân tán.</span>
+          </div>
+        </div>
+      </aside>
+
+      <main class="right">
+        <section class="section">
+          <h2 class="section-title">Kỹ thuật chuyên sâu &amp; Module mở rộng (V-Shield-2.0)</h2>
+
+          <article class="compact-project">
+            <div class="compact-body">
+              <div>
+                <h4>Hệ thống Intercom &amp; Video Call thời gian thực (WebRTC)</h4>
+                <p class="compact-meta">WebRTC · SignalR ChatRelayHub · Authenticated TURN (coturn) · Multi-Device Sync</p>
+                <ul>
+                  <li><strong>Signaling &amp; TURN Relay:</strong> Thiết kế cầu nối tín hiệu hai chiều giữa AreaNode (Docker cổng) và Central (Cloud VPS) qua ChatRelayHub; tích hợp TURN server xác thực (coturn) quảng bá public VPS, thông thoại WebRTC P2P xuyên mọi tầng NAT/firewall doanh nghiệp.</li>
+                  <li><strong>Đồng bộ đa thiết bị &amp; Chống echo:</strong> Xây dựng cơ chế CallHandledElsewhere — khi người dùng nghe/từ chối trên một máy (Web/Mobile), các máy khác tự động hủy chuông; lọc loại trừ node nguồn để triệt tiêu vòng lặp echo tín hiệu giữa Edge và Cloud.</li>
+                </ul>
+              </div>
+              <div class="inline-qr">
+                <img src="https://quickchart.io/qr?size=120&text=https%3A%2F%2Fgithub.com%2Fquantrif31-wq%2FV-Shield-2.0" alt="QR WebRTC Hub" />
+                <span>Repo GitHub</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="compact-project">
+            <div class="compact-body">
+              <div>
+                <h4>Web 3D Dashboard, Mobile Native &amp; Enterprise AI Agent</h4>
+                <p class="compact-meta">Vue 3 · Three.js 3D WebGL · Flutter/Android APK · AI Agent LLM · OWASP</p>
+                <ul>
+                  <li><strong>Web UI 3D &amp; Mobile Native:</strong> Xây dựng Dashboard giám sát trung tâm Vue 3 tích hợp bản đồ 3D Digital Twin (Three.js WebGL) hiển thị barrier/camera; phát triển app Flutter bảo mật vân tay, auto-start on boot và offline Dynamic QR.</li>
+                  <li><strong>AI Agent Doanh nghiệp &amp; Multi-Face:</strong> Thiết kế kiến trúc AI Agent (lõi LLM Tool-in-a-loop, chuẩn bảo mật OWASP) hỗ trợ tra cứu nhân sự và gửi email; runtime GPU nhận diện đồng thời nhiều khuôn mặt và trích xuất bằng chứng xâm nhập.</li>
+                </ul>
+              </div>
+              <div class="inline-qr">
+                <img src="https://quickchart.io/qr?size=120&text=https%3A%2F%2Fgithub.com%2Fquantrif31-wq%2FV-Shield-2.0" alt="QR Web & AI" />
+                <span>Repo GitHub</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="compact-project">
+            <div class="compact-body">
+              <div>
+                <h4>Bảo mật Enterprise, Phân tích hành vi &amp; Vận hành</h4>
+                <p class="compact-meta">UEBA Access Logs · Step-up MFA · Audit Logs · Outbox Pattern · NBomber Load Testing</p>
+                <ul>
+                  <li><strong>Phân tích hành vi UEBA &amp; An ninh:</strong> Xây dựng hệ thống UEBA Access Logs (baseline hành vi 90 ngày, tính điểm rủi ro risk-score), phát hiện bất thường điểm danh, bảo mật xác thực nâng cấp Step-up MFA và toàn diện audit log thiết bị/IP.</li>
+                  <li><strong>Độ tin cậy backend &amp; Đóng gói:</strong> Áp dụng Outbox pattern chống mất sự kiện đồng bộ, tách biệt rate limit cho luồng gửi xe (qr-ops), kiểm thử chịu tải bằng NBomber và đóng gói 100% Docker multi-container stack.</li>
+                </ul>
+              </div>
+              <div class="inline-qr">
+                <img src="https://quickchart.io/qr?size=120&text=https%3A%2F%2Fgithub.com%2Fquantrif31-wq%2FV-Shield-2.0" alt="QR Architecture" />
+                <span>Repo GitHub</span>
+              </div>
+            </div>
+          </article>
+        </section>
+
+        <section class="section">
+          <h2 class="section-title">Giải thưởng dự án</h2>
+          <div class="project">
+            <div class="project-body">
+              <div>
+                <div class="award-item">
+                  <strong>Web AI Hackathon 2026 - Á quân (Tháng 04/2026)</strong>
+                  <span>Đạt giải Á quân với phiên bản tiền thân V-Shield. Tiếp tục R&amp;D và nâng cấp toàn diện lên kiến trúc phân tán doanh nghiệp V-Shield 2.0 (05/2026 - 09/2026).</span>
+                </div>
+              </div>
+              <div class="inline-qr">
+                <img src="https://quickchart.io/qr?size=120&text=https%3A%2F%2Fbaodongnai.com.vn%2Fxa-hoi%2Fkhoa-hoc-cong-nghe%2F202604%2Fdoi-thi-powertech-doat-giai-nhat-cuoc-thi-web-ai-hackathon-nam-2026-f25255e%2F" alt="QR báo Đồng Nai" />
+                <span>Báo Đồng Nai</span>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </section>
+
+  <!-- ==================== TRANG 3 ==================== -->
+  <section class="page">
+    <div class="sheet">
+      <aside class="left">
+        <div class="section">
+          <h2 class="section-title">Thông tin thêm</h2>
+          <div class="ref-item">
+            <strong>Định hướng</strong>
+            <span>Theo đuổi lộ trình Full Stack Developer, ưu tiên làm chủ cả kiến trúc hệ thống backend .NET, giao diện frontend hiện đại và ứng dụng AI thực tế.</span>
+          </div>
+          <div class="ref-item">
+            <strong>Cách làm việc</strong>
+            <span>Tư duy hệ thống rõ ràng, tiếp cận từ bài toán nghiệp vụ thực tế, minh bạch phạm vi đóng góp và cam kết tạo ra giá trị có thể kiểm chứng.</span>
+          </div>
+        </div>
+
+        <div class="section">
+          <h2 class="section-title">Hoạt động</h2>
+          <div class="ref-item">
+            <strong>Poly Run</strong>
+            <span>Tham gia giải chạy của trường, rèn luyện tính kỷ luật, sức bền và ý chí kiên trì.</span>
+          </div>
+          <div class="ref-item">
+            <strong>Hoạt động thiện nguyện cùng trường</strong>
+            <span>Tham gia các chương trình đóng góp cộng đồng và hỗ trợ hoạt động tập thể.</span>
+          </div>
+        </div>
+
+        <div class="section">
+          <h2 class="section-title">Minh bạch mã nguồn</h2>
+          <div class="ref-item">
+            <strong>Cam kết kỹ thuật</strong>
+            <span>Toàn bộ dự án và đóng góp nêu trong CV đều có thể kiểm chứng qua lịch sử commit (commit history), mã nguồn công khai và tài liệu kỹ thuật đi kèm.</span>
+          </div>
+        </div>
+      </aside>
+
+      <main class="right">
+        <section class="section">
+          <h2 class="section-title">Kinh nghiệm thực tập doanh nghiệp</h2>
 
           <article class="project">
             <div class="project-head">
@@ -525,151 +765,19 @@
               </div>
             </div>
           </article>
-
-          <article class="project">
-            <div class="project-head">
-              <h3 class="project-title">WH-Managerment</h3>
-              <div class="project-time">Từ 01/06/2026</div>
-            </div>
-            <div class="project-body">
-              <div>
-                <p class="project-desc">
-                  Phần mềm quản lý kho vận tích hợp AI được xây dựng cho cuộc thi SmartGen AI 2026, theo hướng sản phẩm có thể trình bày và demo ở cấp độ thi đấu.
-                </p>
-                <p class="project-meta">Dự án kho vận tích hợp AI cho SmartGen AI 2026 · Đã vào chung kết, vòng chung kết đang diễn ra</p>
-                <p class="project-role"><strong>Vai trò:</strong> Thành viên phát triển sản phẩm · Backend / hỗ trợ hoàn thiện hệ thống.</p>
-                <ul>
-                  <li>Tham gia cùng đội trong giai đoạn hoàn thiện sản phẩm gần sát vòng chung kết để đưa hệ thống về trạng thái sẵn sàng trình bày và demo.</li>
-                  <li>Làm việc bám theo cấu trúc dự án gồm backend, frontend và tài liệu hóa để hỗ trợ tiến độ tổng thể của sản phẩm.</li>
-                  <li>Tính đến ngày 19/06/2026, dự án đã vào chung kết và vòng thi chung kết diễn ra vào 20/06/2026; chưa có kết quả cuối cùng nên không ghi nhận vượt phạm vi thực tế.</li>
-                </ul>
-                <div class="project-note">Phần mô tả được giữ ở mức đã kiểm chứng từ repo công khai và trạng thái cuộc thi.</div>
-              </div>
-              <div class="inline-qr">
-                <img src="https://quickchart.io/qr?size=120&text=https%3A%2F%2Fgithub.com%2FWH-Managerment%2FWH-Managerment" alt="QR repo WH-Managerment" />
-                <span>Repo GitHub</span>
-                <img src="https://quickchart.io/qr?size=120&text=https%3A%2F%2Fweb.facebook.com%2FCNTTFPLHCM%2Fposts%2Fpfbid0XSWke2Kw7CMoKDJWroXXuCBuQiv96XN5tYUCqu8zmAPm96Av7uTwynXhg9xxScmKl" alt="QR chứng cứ SmartGen AI" />
-                <span>Minh chứng cuộc thi</span>
-              </div>
-            </div>
-          </article>
-
-        </section>
-      </main>
-    </div>
-  </section>
-
-  <section class="page">
-    <div class="sheet">
-      <aside class="left">
-        <div class="section">
-          <h2 class="section-title">Thế mạnh làm việc</h2>
-          <div class="tag-list">
-            <span class="tag">Backend mindset</span>
-            <span class="tag">WMS/ERP interest</span>
-            <span class="tag">API-first</span>
-            <span class="tag">Data integrity</span>
-            <span class="tag">Problem solving</span>
-          </div>
-        </div>
-
-        <div class="section">
-          <h2 class="section-title">Công cụ hỗ trợ</h2>
-          <div class="tag-list">
-            <span class="tag">SQL Server</span>
-            <span class="tag">EF Core</span>
-            <span class="tag">Swagger</span>
-            <span class="tag">Postman</span>
-            <span class="tag">GitHub</span>
-            <span class="tag">Docker</span>
-            <span class="tag">Vue/Vite</span>
-          </div>
-        </div>
-
-        <div class="section">
-          <h2 class="section-title">Thông tin thêm</h2>
-          <div class="ref-item">
-            <strong>Định hướng</strong>
-            <span>Theo đuổi lộ trình backend .NET, ưu tiên môi trường có yêu cầu rõ về chất lượng, vận hành và tính ổn định.</span>
-          </div>
-          <div class="ref-item">
-            <strong>Cách làm việc</strong>
-            <span>Tập trung vào phần việc có thể kiểm chứng, tiếp cận bài toán từ dữ liệu và quy trình thay vì mô tả chung chung.</span>
-          </div>
-        </div>
-
-        <div class="section">
-          <h2 class="section-title">Hoạt động</h2>
-          <div class="ref-item">
-            <strong>Poly Run</strong>
-            <span>Tham gia giải chạy của trường, rèn luyện tính kỷ luật và sức bền.</span>
-          </div>
-          <div class="ref-item">
-            <strong>Hoạt động thiện nguyện cùng trường</strong>
-            <span>Tham gia các chương trình đóng góp cộng đồng và hỗ trợ hoạt động tập thể.</span>
-          </div>
-        </div>
-      </aside>
-
-      <main class="right">
-        <section class="section">
-          <h2 class="section-title">Tiếp tục dự án trọng tâm</h2>
-
-          <article class="project">
-            <div class="project-head">
-              <h3 class="project-title">V-Shield-2.0</h3>
-              <div class="project-time">05/2026 - 06/2026</div>
-            </div>
-            <div class="project-body">
-              <div>
-                <p class="project-desc">
-                  Phần mềm kiểm soát truy cập được nâng cấp lên phiên bản 2.0 theo hướng doanh nghiệp hơn, chú trọng bảo mật, phân tích dữ liệu và khả năng sẵn sàng triển khai.
-                </p>
-                <p class="project-meta">Phiên bản nâng cấp rõ rệt từ V-Shield · Security system, AI-oriented features và deployment readiness</p>
-                <p class="project-role"><strong>Vai trò:</strong> Người phát triển chính · Backend / AI / deployment readiness.</p>
-                <ul>
-                  <li>Trực tiếp phát triển các hạng mục security hardening, enterprise readiness và ổn định hóa các luồng startup/MFA.</li>
-                  <li>Xây dựng các tính năng AI và analytics như attendance anomaly detection, UEBA access log, dashboard intelligence và fuzzy matching cho biển số.</li>
-                  <li>Thực hiện import pipeline, import/export metadata module, đồng thời chuẩn bị Docker runtime và tài liệu deployment/public-domain readiness.</li>
-                </ul>
-              </div>
-              <div class="inline-qr">
-                <img src="https://quickchart.io/qr?size=120&text=https%3A%2F%2Fgithub.com%2Fquantrif31-wq%2FV-Shield-2.0" alt="QR repo V-Shield-2.0" />
-                <span>Repo GitHub</span>
-              </div>
-            </div>
-          </article>
-        </section>
-
-        <section class="section">
-          <h2 class="section-title">Giải thưởng</h2>
-          <div class="project">
-            <div class="project-body">
-              <div>
-                <div class="award-item">
-                  <strong>Web AI Hackathon 2026 - Á quân</strong>
-                  <span>Thành tích gắn với dự án V-Shield-2.0.</span>
-                  <span>Đính kèm mã QR để nhà tuyển dụng có thể xác minh nhanh nguồn tin công khai.</span>
-                </div>
-              </div>
-              <div class="inline-qr">
-                <img src="https://quickchart.io/qr?size=120&text=https%3A%2F%2Fbaodongnai.com.vn%2Fxa-hoi%2Fkhoa-hoc-cong-nghe%2F202604%2Fdoi-thi-powertech-doat-giai-nhat-cuoc-thi-web-ai-hackathon-nam-2026-f25255e%2F" alt="QR báo Đồng Nai" />
-                <span>Báo Đồng Nai</span>
-              </div>
-            </div>
-          </div>
         </section>
 
         <section class="section">
           <h2 class="section-title">Dự án tham khảo thêm</h2>
+          <div class="mini-note" style="margin: -3px 0 7px; font-size: 11.2px; color: var(--muted);">(Các dự án nền tảng phát triển trên tài khoản GitHub cá nhân ARKPVT - Phạm Văn Thành)</div>
 
           <article class="compact-project">
             <div class="compact-body">
               <div>
                 <h4>Hệ thống quản lý rạp phim</h4>
-                <p>Phần mềm quản lý rạp phim xây dựng theo hướng tách lớp nghiệp vụ và dữ liệu, phục vụ các thao tác quản lý cơ bản trong hệ thống phòng vé.</p>
-                <p class="compact-meta">ARKPVT/QL_PV · C# / BLL / DAL / DTO</p>
-                <p class="compact-role"><strong>Vai trò:</strong> Backend logic / desktop application developer.</p>
+                <p>Phần mềm desktop quản lý phòng vé theo kiến trúc phân tầng (BLL, DAL, DTO), xử lý danh mục phim, lịch chiếu và giao dịch vé.</p>
+                <p class="compact-meta">ARKPVT/QL_PV · C# / WinForms / SQL Server</p>
+                <p class="compact-role"><strong>Vai trò:</strong> Backend logic developer — Xây dựng cấu trúc phân lớp BLL/DAL/DTO, xử lý dữ liệu và logic nghiệp vụ phòng vé.</p>
                 <ul>
                   <li>Tham gia xây dựng cấu trúc phân lớp gồm BLL, DAL, DTO và project chính để tổ chức xử lý nghiệp vụ rõ ràng hơn.</li>
                   <li>Làm việc với logic quản lý dữ liệu và luồng xử lý nền tảng cho bài toán quản lý rạp phim trong ứng dụng C#.</li>
@@ -686,12 +794,12 @@
             <div class="compact-body">
               <div>
                 <h4>Website bán bánh online</h4>
-                <p>Website bán bánh và vận hành đơn hàng nội bộ, phát triển trên ASP.NET Core với nhiều module quản lý sản phẩm, kho, đơn hàng và nhân sự.</p>
-                <p class="compact-meta">ARKPVT/Ban_Banh · ASP.NET Core / C# / SQL</p>
-                <p class="compact-role"><strong>Vai trò:</strong> Backend developer.</p>
+                <p>Website thương mại và quản trị đơn hàng nội bộ, phát triển trên ASP.NET Core với các module quản lý sản phẩm, đơn hàng và kho.</p>
+                <p class="compact-meta">ARKPVT/Ban_Banh · ASP.NET Core / C# / SQL Server / Web UI</p>
+                <p class="compact-role"><strong>Vai trò:</strong> Full Stack developer — Thiết kế kiến trúc backend ASP.NET Core, schema SQL Server kết hợp xây dựng giao diện bán hàng, giỏ hàng và dashboard quản trị.</p>
                 <ul>
-                  <li>Xây dựng backend cho các nhóm chức năng như sản phẩm, đơn hàng, tồn kho, nhà cung cấp, nhân viên và dashboard vận hành.</li>
-                  <li>Làm việc với controller, model, dữ liệu SQL và luồng xử lý quản trị để hỗ trợ vận hành website bán bánh.</li>
+                  <li>Xây dựng backend REST API và schema SQL cho danh mục sản phẩm, đơn hàng, tồn kho và dashboard vận hành.</li>
+                  <li>Phát triển giao diện web responsive, xử lý trải nghiệm đặt hàng/giỏ hàng và xác thực người dùng nội bộ.</li>
                 </ul>
               </div>
               <div class="inline-qr">
@@ -701,7 +809,6 @@
             </div>
           </article>
         </section>
-
       </main>
     </div>
   </section>
